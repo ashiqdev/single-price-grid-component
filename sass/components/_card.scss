@@ -1,0 +1,128 @@
+.card {
+  width: 62.6rem;
+  box-shadow: 3px 3px 6px #66666665;
+  border-radius: 12px 12px;
+
+  @include respond(tab-port) {
+    width: 311px;
+  }
+
+  &__heading {
+    border-radius: 12px 12px 0 0;
+    background: #fff;
+    padding: 3rem;
+    @include respond(tab-port) {
+        padding: 4rem;
+      }
+    &-title {
+      font-size: 2.2rem;
+      color: $color-primary-cyan;
+      font-weight: 700;
+    }
+
+    &-para {
+      color: $color-primary-bright-yellow;
+      font-weight: bold;
+      font-size: 1.7rem;
+    }
+
+    &-details {
+      color: $color-neutral-grayish-blue;
+      font-size: 1.6rem;
+      line-height: 2;
+    }
+  }
+
+  &__heading > * {
+    margin-bottom: 2rem;
+  }
+
+  &__heading-details {
+    margin-bottom: 0px;
+  }
+
+  &__features {
+    color: #fff;
+    display: flex;
+    overflow: hidden;
+
+    border-radius: 0px 0px 12px 12px;
+    // padding: 3rem;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+      }
+
+    &-sub {
+      background-color: $color-primary-cyan;
+      flex: 0 0 50%;
+      padding: 3rem;
+     
+
+      &-type {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      &-text {
+        font-size: 1.6rem;
+        color: $color-neutral-gray;
+        vertical-align: middle;
+        color: $color-light-gray;
+      }
+
+      &-amount {
+        font-size: 3.2rem;
+        vertical-align: middle;
+        margin-right: 1rem;
+        font-weight: 700;
+      }
+
+      &-slogan {
+        font-size: 1.6rem;
+      }
+
+      &-cta {
+        border: none;
+        width: 100%;
+        background: $color-primary-bright-yellow;
+        height: 48px;
+        border-radius: 6px;
+        color: white;
+        font-weight: 700;
+        font-size: 1.6rem;
+        box-shadow: 3px 3px 6px #66666665;
+
+        &:focus {
+            outline: none;
+        }
+      }
+    }
+
+    &-sub > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &-sub-slogan {
+      margin-bottom: 3.4rem;
+    }
+
+    &-why {
+      background-color: $color-secondary-cyan;
+      padding: 3rem;
+      flex: 1;
+
+      &-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+
+      &-items {
+        font-size: 1.6rem;
+        list-style-type: none;
+        color: $color-neutral-gray;
+      }
+    }
+  }
+}
